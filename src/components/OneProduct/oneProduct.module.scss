@@ -1,0 +1,174 @@
+.product {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+  max-width: 900px;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    padding: 1rem 0.5rem;
+    gap: 1rem;
+  }
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 400px;
+  background: white;
+  overflow: hidden;
+  border-radius: 0;
+  box-shadow: none;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 0.5rem;
+  }
+
+  @media (max-width: 768px) {
+    height: 250px;
+    padding: 0.25rem;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: #333;
+  margin: 0;
+  line-height: 1.4;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+}
+
+.price {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #333;
+  margin: 0;
+
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
+  }
+}
+
+.rating {
+  display: flex;
+  gap: 0.75rem;
+  color: #666;
+  font-size: 1rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+  margin: 0;
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+  }
+}
+
+.addToCart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  margin-top: auto;
+
+  &:hover {
+    background: #555;
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+
+    svg {
+      width: 14px;
+      height: 14px;
+    }
+  }
+}
+
+.skeleton {
+  padding: 1.5rem 0;
+  max-width: 900px;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    padding: 1rem 0.5rem;
+  }
+}
+
+.error {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #333;
+  max-width: 900px;
+  margin: 0 auto;
+
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  button {
+    padding: 0.5rem 1rem;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 400;
+    transition: background 0.2s ease;
+
+    &:hover {
+      background: #555;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 1.5rem 0.5rem;
+
+    p {
+      font-size: 1rem;
+    }
+
+    button {
+      padding: 0.4rem 0.8rem;
+      font-size: 0.9rem;
+    }
+  }
+}

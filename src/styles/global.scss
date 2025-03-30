@@ -1,0 +1,17 @@
+@use 'reset';
+@use 'fonts';
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #616161;
+
+  scrollbar-width: none;
+  overflow: -moz-scrollbars-none;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

@@ -1,0 +1,118 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+    transform: translateY(-2px);
+
+    .cartButton {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+  }
+}
+
+.image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  padding: 16px;
+  transition: transform 0.3s ease;
+}
+
+.content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: color 0.3s ease;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2;
+  transition: color 0.3s ease;
+}
+
+.price {
+  font-size: 1.1rem;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.cartButton {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  background: white;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(10px);
+  cursor: pointer;
+
+  svg {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+    fill: #616161;
+  }
+
+  &:hover {
+    svg {
+      transform: scale(1.1);
+    }
+  }
+
+  &.inCart {
+    &:hover {
+      svg {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .image {
+    aspect-ratio: 4 / 3;
+    padding: 12px;
+  }
+
+  .title {
+    font-size: 0.95rem;
+  }
+
+  .price {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    border-radius: 12px;
+  }
+
+  .cartButton {
+    width: 32px;
+    height: 32px;
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
