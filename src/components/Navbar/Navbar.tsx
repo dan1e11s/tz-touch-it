@@ -14,7 +14,7 @@ import FiltersModal from '@/components/Filters/FiltersModal';
 import MenuIcon from '@/assets/svg/menu.svg?react';
 import CloseIcon from '@/assets/svg/close.svg?react';
 
-import styles from './Navbar.module.scss';
+import styles from './navbar.module.scss';
 
 const Navbar = forwardRef<HTMLElement>((_, ref) => {
   const dispatch = useAppDispatch();
