@@ -1,12 +1,15 @@
 import { useEffect, useState } from 'react';
+
 import { useAppDispatch } from '@/hooks/useAppDispatch';
 import { useAppSelector } from '@/hooks/useAppSelector';
+
 import { setQuery, selectSearch } from '@/store/features/search/searchSlice';
-import {
-  selectProducts,
-  IProduct,
-} from '@/store/features/products/productsSlice';
+import { selectProducts } from '@/store/features/products/productsSlice';
+
+import { IProduct } from '@/types/interfaces';
+
 import ProductCard from '@/components/ProductCard/ProductCard';
+
 import styles from './searchModal.module.scss';
 
 interface Props {
